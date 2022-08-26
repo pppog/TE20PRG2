@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Ben {
     public static void main(String[] args) {
         int svar = -1;
-        for (int i = 0; i<5; i++) {
+        String input = "";
+        int length = (int) (Math.random()* 5 + 5);
+        for (int i = 0; i<length; i++) {
             String a = "Therapist: Ok, vem frågade?";
             String b = "Therapist: på gud?";
             String c = "Therapist: nae, va sjukt";
@@ -27,8 +29,17 @@ public class Ben {
             String v = "Therapist: är du på droger";
             String w = "Therapist: är du dum eller?";
             String y = "Therapist: Jävla idiot";
+            String z = "Therapist: 💀💀💀";
+            String aa = "Therapist: NÄÄÄ!!!!!";
+            String ab = "Therapist: Du har downsyndrom";
+            String ac = "Therapist: Kan du förklara lite mer?";
+            String ad = "Therapist: ok, men hur går det med din familj?";
+            String af = "Therapist: det där är ovikitigt";
+            String ag = "Therapist: UT!!!";
             if (svar == -1) {
                 System.out.println("Therapist: Vad skulle du vilja prata om?");
+            } else if (input.length()>50) {
+                System.out.println("Therapist: Jag orkar inte läsa det där");
             } else if (svar == 0) {
                 System.out.println(a);
             } else if (svar == 1) {
@@ -77,10 +88,25 @@ public class Ben {
                 System.out.println(w);
             } else if (svar == 23) {
                 System.out.println(y);
+            } else if (svar == 24) {
+                System.out.println(z);
+            } else if (svar == 25) {
+                System.out.println(aa);
+            } else if (svar == 26) {
+                System.out.println(ab);
+            } else if (svar == 27) {
+                System.out.println(ac);
+            } else if (svar == 28) {
+                System.out.println(ad);
+            } else if (svar == 29) {
+                System.out.println(af);
+            } else if (svar == 30) {
+                System.out.println(ag);
             }
             Scanner scan = new Scanner(System.in);
-            String input = scan.nextLine();
-            svar = (int) (Math.random() * 19);
+            input = scan.nextLine();
+            svar = (int) (Math.random() * 30);
+
         }
         System.out.println("Therapist has left the chat");
     }
