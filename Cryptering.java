@@ -4,15 +4,18 @@ public class Cryptering {
     public static void main(String[] args) {
         String message = JOptionPane.showInputDialog("encrypt 👍");
         String crypt = "";
+        String hex = "";
+        String word = "";
+        int key = 69;
         for(int i = 0; i<message.length(); i++) {
-            char x = message.charAt(i);
-            char key = '(';
-            if(message.charAt(i) == ' ') {
-                crypt += ' ';
-            } else {
-                crypt += (char) (x ^ key);
-            }
+            int x = message.charAt(i);
+            hex = Integer.toHexString(krypt(x,key));
+            crypt += hex;
         }
         System.out.println(crypt);
+    }
+    static int krypt(int m, int k) {
+        int c =m^k;
+        return c;
     }
 }
